@@ -91,3 +91,8 @@ Entre 20 e 40% argila - solo areno-argiloso
 :
 
 _____________________________________________________________________________________________________
+as referências:
+
+https://www.ufsm.br/app/uploads/sites/342/2020/04/SOLOS.pdf
+
+https://biblioteca.incaper.es.gov.br/digital/bitstream/item/40/1/Guia-interpretacao-analise-solo.pdf

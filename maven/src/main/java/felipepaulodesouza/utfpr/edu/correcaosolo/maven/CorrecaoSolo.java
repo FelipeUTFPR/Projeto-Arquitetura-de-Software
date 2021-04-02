@@ -5,6 +5,7 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class CorrecaoSolo {
+	private double Fosforo;
 	private double potassio;
 	private double calcio;
 	private double magnesio;
@@ -12,9 +13,12 @@ public class CorrecaoSolo {
 	private double aluminio;
 	private double hidrominio;
 	private double matOrganica;
+	private double areaTalhao;
 	private int texSolo;
 	
+	
 	public CorrecaoSolo() {
+		
 
 
 	}
@@ -29,6 +33,10 @@ public class CorrecaoSolo {
 	public double ctc() {
 		return somaBase() + getHidrominio();
 		
+		}
+	
+	public double ctck() {
+		return potassio/ctc();
 		}
 	
 	public double satBaseV() {
@@ -224,6 +232,30 @@ if(somaBase() < 2.0) {
 
 	public void setTexSolo(int texSolo) {
 		this.texSolo = texSolo;
+	}
+
+
+
+	public double getAreaTalhao() {
+		return areaTalhao;
+	}
+
+
+
+	public void setAreaTalhao(double areaTalhao) {
+		this.areaTalhao = areaTalhao;
+	}
+
+
+
+	public double getFosforo() {
+		return Fosforo;
+	}
+
+
+
+	public void setFosforo(double fosforo) {
+		Fosforo = fosforo;
 	}
 	
 	

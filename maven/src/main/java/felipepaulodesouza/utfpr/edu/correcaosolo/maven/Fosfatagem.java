@@ -1,6 +1,6 @@
 package felipepaulodesouza.utfpr.edu.correcaosolo.maven;
 
-public class Fosfatagem extends CorrecaoSolo{
+public class Fosfatagem extends CorrecaoSolo {
 	
 	private double metaFosforo;
 	private double fonteFosforo;
@@ -11,29 +11,64 @@ public class Fosfatagem extends CorrecaoSolo{
 	
 	public Fosfatagem() {
 		
-
-
+		
 	}
-	public double apliPHa() {
-		return ((((getMetaFosforo()-getFosforo())*2.29*2*100))/getEficFosforo()*100)/getTeorFonteFosforo();
+	//quanto aplicar, em toneladas, a quantidade de fosforo necessário por Hectare
+	
+	public double calcularFosforoPorHectare(
+			double idealFosforo,
+			double fosforo,
+			double eficFosforo,
+			double teorFonteFosforo) {
+		
+		return ((((idealFosforo-fosforo)*2.29*2*100))/eficFosforo*100)/teorFonteFosforo;
+		
 		}
 	
 	
-	public double apliPAlq() {
-		return apliPHa()*2.42;
+	public double calcularFosforoPorAlquere(
+			double idealFosforo,
+			double fosforo,
+			double eficFosforo,
+			double teorFonteFosforo) {
+		
+		return calcularFosforoPorHectare(idealFosforo,fosforo, eficFosforo,teorFonteFosforo )*2.42;
+		
 		}
 	
-	public double custoAlq() {
-		return getValFonteFosforo()*(apliPAlq()/1000);
-		}
-	public double custoHa() {
-		return custoAlq()/2.42;
+	public double custoFosforoPorAlqueire(
+			double idealFosforo,
+			double fosforo,
+			double eficFosforo,
+			double teorFonteFosforo,
+			double valFonteFosforo) {
+		
+		return valFonteFosforo*(calcularFosforoPorAlquere(idealFosforo,fosforo, eficFosforo,teorFonteFosforo)/1000);
+		
 		}
 	
-	public double custoTotalHa() {
-		return custoHa()*getAreaTalhao();
+	public double custoFosforoPorHectare(
+			double idealFosforo,
+			double fosforo,
+			double eficFosforo,
+			double teorFonteFosforo,
+			double valFonteFosforo) {
+		
+		return custoFosforoPorAlqueire(idealFosforo,fosforo,eficFosforo,teorFonteFosforo,valFonteFosforo)/2.42;
+		
 		}
 	
+	public double custoTotalHa(
+			double idealFosforo,
+			double fosforo,
+			double eficFosforo,
+			double teorFonteFosforo,
+			double valFonteFosforo,
+			double areaTalhao) {
+		
+		return custoFosforoPorHectare(idealFosforo,fosforo,eficFosforo,teorFonteFosforo,valFonteFosforo)*areaTalhao;
+		
+		}
 	
 	
 	

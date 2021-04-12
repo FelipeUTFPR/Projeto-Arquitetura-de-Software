@@ -20,38 +20,61 @@ public class CorrecaoSolo {
 	public CorrecaoSolo() {
 		
 
-
 	}
 	
 	
 	
-	public double somaBase() {
-		return getPotassio() + getCalcio() + getMagnesio();
+	public double somaBase(
+			double potassio,
+			double calcio,
+			double magnesio) {
+		
+		return potassio + calcio + magnesio;
 		
 		}
 	
-	public double ctc() {
-		return somaBase() + getHidrominio();
+	public double ctc(
+			double potassio,
+			double calcio,
+			double magnesio,
+			double hidrominio) {
+		
+		return somaBase(potassio, calcio, magnesio) + hidrominio;
 		
 		}
 	
-	public double ctck() {
-		return potassio/ctc();
-		}
-	
-	public double satBaseV() {
-		return (somaBase()/ctc())*100;
+	public double ctck(
+			double potassio,
+			double calcio,
+			double magnesio,
+			double hidrominio) {
+		
+		return potassio/ctc(potassio,calcio,magnesio, hidrominio);
 		
 		}
 	
-	public double moCento() {
-		return getMatOrganica()/10;
+	public double satBaseV(
+			double potassio,
+			double calcio,
+			double magnesio,
+			double hidrominio) {
+		
+		return (somaBase(potassio, calcio, magnesio)/ctc(potassio,calcio,magnesio, hidrominio))*100;
 		
 		}
-	public double carbono() {
-		return getMatOrganica()/1.72;
+	
+	public double moCento(double matOrganica) {
+		
+		return matOrganica/10;
 		
 		}
+	public double carbono(double matOrganica) {
+		
+		return matOrganica/1.72;
+		
+		}
+	
+	/*	
 	
 	public void mostrarValores() {
 		
@@ -62,7 +85,7 @@ public class CorrecaoSolo {
 		String classSolo="";
 		NumberFormat df = new DecimalFormat("###,##0.00");
 		
-		
+	
 		//Classificação SB
 		
 if(somaBase() < 2.0) {
@@ -154,6 +177,10 @@ if(somaBase() < 2.0) {
 		 
 		 	 
 	}
+	
+	*/
+	
+	
 		
 
 	public double getPotassio() {

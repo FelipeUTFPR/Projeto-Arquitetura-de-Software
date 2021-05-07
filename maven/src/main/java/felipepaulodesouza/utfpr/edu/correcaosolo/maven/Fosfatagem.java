@@ -2,6 +2,8 @@ package felipepaulodesouza.utfpr.edu.correcaosolo.maven;
 
 public class Fosfatagem extends CorrecaoSolo {
 	
+	//Extendi a classe "CorrecaoSolo" para não precisar repetir seus atributos na sub-classe.
+	
 	private double metaFosforo;
 	private double fonteFosforo;
 	private double valFonteFosforo;
@@ -13,7 +15,13 @@ public class Fosfatagem extends CorrecaoSolo {
 		
 		
 	}
-	//quanto aplicar, em toneladas, a quantidade de fosforo necessário por Hectare
+	
+	
+public Fosfatagem(double valFonteFosforo) {
+	this.valFonteFosforo = valFonteFosforo;
+		
+	}
+	//quanto aplicar, em kilos, a quantidade de fosforo necessária por Hectare
 	
 	public double calcularFosforoPorHectare(
 			double idealFosforo,
@@ -79,8 +87,6 @@ public class Fosfatagem extends CorrecaoSolo {
 	public void setMetaFosforo(double metaFosforo) {
 		this.metaFosforo = metaFosforo;
 	}
-	
-
 	public double getFonteFosforo() {
 		return fonteFosforo;
 	}

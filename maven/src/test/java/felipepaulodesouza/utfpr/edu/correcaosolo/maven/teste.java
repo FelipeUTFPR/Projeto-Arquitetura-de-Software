@@ -11,9 +11,9 @@ public class teste {
 		 
 		
 		 
-		 //Valor na planilha 440.55, valor teórico 450.54, verificar erro?
+		//Valor de acordo com a planilha
 
-		 assertEquals(450.55, new Potassagem().calcularPotassioPorHectare(3, 0.15, 5.76, 1.63, 5.35, 85, 58), 0.1);
+		 assertEquals(450.55, new Potassagem().calcularPotassioPorHectare(3, 0.15, 5.76, 1.63, 5.35, 85, FontesPotassio.CLORETO_DE_POTASSIO.verificaFontePotassio().getValFontePotassio()), 0.1);
 		 
 	}
 	
@@ -21,7 +21,7 @@ public class teste {
 	public void test2CustoTotalPotassio() {
 		 
 		 
-		 //Valor na planilha 5421.61, valor teórico 5609.30, verificar erro?
+		//Valor de acordo com a planilha
 
 		 assertEquals(5451.61, new Potassagem().custoTotalKHa(3, 0.15, 5.76, 1.63, 5.35, 85, 58, 2500, 4.84), 0.1);
 		 

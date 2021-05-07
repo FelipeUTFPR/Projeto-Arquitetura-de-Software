@@ -13,6 +13,11 @@ public class Potassagem extends CorrecaoSolo{
 	public Potassagem() {
 		
 	}
+	
+	public Potassagem(double valFontePotassio) {
+		this.valFontePotassio = valFontePotassio;
+	}
+	
 	//idealPotassio: valor de potássio que se pretende atingir
 	public double idealPotassio(
 			double metaCtcPotassio,
@@ -24,7 +29,7 @@ public class Potassagem extends CorrecaoSolo{
 		return (metaCtcPotassio*ctc(potassio,calcio,magnesio,hidrominio))/100;
 
 		}
-	//quanto aplicar, em toneladas, a quantidade de potássio por Hectare
+	//quanto aplicar, em kilos, a quantidade de potássio necessária por Hectare
 	public double calcularPotassioPorHectare(
 			double metaCtcPotassio,
 			double potassio,

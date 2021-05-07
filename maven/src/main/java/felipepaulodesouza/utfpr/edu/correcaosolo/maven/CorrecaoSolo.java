@@ -23,7 +23,6 @@ public class CorrecaoSolo {
 	}
 	
 	
-	
 	public double somaBase(
 			double potassio,
 			double calcio,

@@ -75,7 +75,7 @@ custoTotalPHa = custoPHa * AreaTalhao(ha)
 
 ---
 
-# Correção/Recuperação de Potássio
+## Correção/Recuperação de Potássio
 
 ### Formulário Conversão Unidades
 
@@ -132,9 +132,9 @@ custoKHa = custoKAl /2.42
 custoTotalKHa = custoKHa * AreaTalhao(ha)
 
 
-## Projeto-Arquitetura-de-Software-Parte-1 ##
+# Projeto-Arquitetura-de-Software-Parte-1 ##
 
-#Variável: SB 
+### Variável: SB 
 
 Significado: Soma das Bases
 
@@ -150,7 +150,7 @@ Classificação: Baixo < 2.0 ; Médio ≥2.0 e ≥5.0 ; Alto >5.0
 
 _____________________________________________________________________________________________________
 
-#Variável: CTC ou T
+### Variável: CTC ou T
 
 Significado: Capacidade de Troca de Cátions
 
@@ -168,7 +168,7 @@ ________________________________________________________________________________
 
 
 
-#Variável: V
+### Variável: V
 
 Significado: Saturação em Bases
 
@@ -184,7 +184,7 @@ ________________________________________________________________________________
 
 ---
 
-## Variável: M.o.
+### Variável: M.o.
 
 Significado: Matéria Orgânica do Solo
 
@@ -204,7 +204,7 @@ ________________________________________________________________________________
 
 
 
-#Variável: texSolo
+### Variável: texSolo
 
 Significado: Textura do Solo
 

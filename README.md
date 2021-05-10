@@ -1,4 +1,13 @@
 # Projeto-Arquitetura-de-Software-Parte-4
+
+O objetivo da 4 parte do projeto foi para avaliar um código e procurar a necessidade de melhorias na arquitetura.
+
+1. Após fazer o Fork para meu repositório, e clonar o projeto para o Eclipse, passei por algumas dificuldades iniciais, pois percebi que a versão do meu jre estava diferente do arquivo clonado. Consegui resolver o problema alterando para a versão mais atual.
+2. Iniciando a análise do código, para tentar compreender sua estrutura, pude verificar que o autor do código cumpriu com boa parte das implementações. Os métodos da classe "Correct" estavam ok, mesmo assim, fiz uma pequena alteração nos argumentos para aproveitar melhor seu Sistema de Builds.
+3. Meu Esforço maior na análise foi das classes "AnalisaFosforo" e "AnalisaPotassio", apesar do autor implementar todos os métodos solicitados, faltavam dados para seu entendimento. Porem, o problema foi contornado, aproveitando seu sistema de Builds que facilitava  a manipulação dos atributos nos métodos e a sua manutenção, consegui reescrever todos os métodos sem dificuldades.
+4. O autor do código não fez uso de alguns atributos, como por exemplo, na classe "FosforoCorrect" e "PotassioCorrect", ele não  usou os atributos que seriam para diferenciar as Fontes do Fosfor e do potássio. Uma possivel solução, seria criar uma Classe Enum para organizar esses atributos. Apesar da falha, isso não Interferiu na análise dos testes.
+5. Por fim, depois de fazer os ajustes, os testes (I), (II) e (III) foram realizados com sucesso. De acordo com as informações da planilha.
+
 # Projeto-Arquitetura-de-Software-Parte-3
 
 Corrigido a descrição e a estrutura dos métodos nas Classes: "Fosfatagem", "Potassagem e "correcaoSolo".
